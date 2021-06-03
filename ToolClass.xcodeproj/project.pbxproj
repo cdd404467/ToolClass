@@ -17,6 +17,11 @@
 		6E30BE912668D672008651EF /* ToolClassUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E30BE902668D672008651EF /* ToolClassUITests.swift */; };
 		6E30BEA12668D73A008651EF /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E30BEA02668D73A008651EF /* String+Extension.swift */; };
 		6E30BEA32668DBB5008651EF /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E30BEA22668DBB5008651EF /* UIColor+Extension.swift */; };
+		6E30BEA92668DC7C008651EF /* UIColor+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E30BEA82668DC7C008651EF /* UIColor+Hex.m */; };
+		6E30BEAF2668DDAD008651EF /* CountDown.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E30BEAE2668DDAD008651EF /* CountDown.m */; };
+		6E30BEB22668E04C008651EF /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E30BEB02668E04C008651EF /* UITableView+Extension.swift */; };
+		6E30BEB32668E04C008651EF /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E30BEB12668E04C008651EF /* UIView+Extension.swift */; };
+		6E30BEB52668E09F008651EF /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E30BEB42668E09F008651EF /* UIImage+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +58,14 @@
 		6E30BE922668D672008651EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6E30BEA02668D73A008651EF /* String+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		6E30BEA22668DBB5008651EF /* UIColor+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		6E30BEA62668DC7C008651EF /* ToolClass-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ToolClass-Bridging-Header.h"; sourceTree = "<group>"; };
+		6E30BEA72668DC7C008651EF /* UIColor+Hex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Hex.h"; sourceTree = "<group>"; };
+		6E30BEA82668DC7C008651EF /* UIColor+Hex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Hex.m"; sourceTree = "<group>"; };
+		6E30BEAD2668DDAD008651EF /* CountDown.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CountDown.h; sourceTree = "<group>"; };
+		6E30BEAE2668DDAD008651EF /* CountDown.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CountDown.m; sourceTree = "<group>"; };
+		6E30BEB02668E04C008651EF /* UITableView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
+		6E30BEB12668E04C008651EF /* UIView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		6E30BEB42668E09F008651EF /* UIImage+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +121,7 @@
 				6E30BE6E2668D671008651EF /* AppDelegate.swift */,
 				6E30BE702668D671008651EF /* SceneDelegate.swift */,
 				6E30BE722668D671008651EF /* ViewController.swift */,
+				6E30BEA62668DC7C008651EF /* ToolClass-Bridging-Header.h */,
 				6E30BE742668D671008651EF /* Main.storyboard */,
 				6E30BE772668D672008651EF /* Assets.xcassets */,
 				6E30BE792668D672008651EF /* LaunchScreen.storyboard */,
@@ -137,8 +151,7 @@
 		6E30BE9E2668D6E3008651EF /* Swift */ = {
 			isa = PBXGroup;
 			children = (
-				6E30BEA22668DBB5008651EF /* UIColor+Extension.swift */,
-				6E30BEA02668D73A008651EF /* String+Extension.swift */,
+				6E30BEA42668DC45008651EF /* Extension */,
 			);
 			path = Swift;
 			sourceTree = "<group>";
@@ -146,8 +159,48 @@
 		6E30BE9F2668D6FA008651EF /* OC */ = {
 			isa = PBXGroup;
 			children = (
+				6E30BEAC2668DD9B008651EF /* Class */,
+				6E30BEAA2668DD6C008651EF /* Tools */,
+				6E30BEA52668DC62008651EF /* Extension */,
 			);
 			path = OC;
+			sourceTree = "<group>";
+		};
+		6E30BEA42668DC45008651EF /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				6E30BEB42668E09F008651EF /* UIImage+Extension.swift */,
+				6E30BEB02668E04C008651EF /* UITableView+Extension.swift */,
+				6E30BEB12668E04C008651EF /* UIView+Extension.swift */,
+				6E30BEA22668DBB5008651EF /* UIColor+Extension.swift */,
+				6E30BEA02668D73A008651EF /* String+Extension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		6E30BEA52668DC62008651EF /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				6E30BEA72668DC7C008651EF /* UIColor+Hex.h */,
+				6E30BEA82668DC7C008651EF /* UIColor+Hex.m */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		6E30BEAA2668DD6C008651EF /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		6E30BEAC2668DD9B008651EF /* Class */ = {
+			isa = PBXGroup;
+			children = (
+				6E30BEAD2668DDAD008651EF /* CountDown.h */,
+				6E30BEAE2668DDAD008651EF /* CountDown.m */,
+			);
+			path = Class;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -217,6 +270,7 @@
 				TargetAttributes = {
 					6E30BE6A2668D671008651EF = {
 						CreatedOnToolsVersion = 12.5;
+						LastSwiftMigration = 1250;
 					};
 					6E30BE802668D672008651EF = {
 						CreatedOnToolsVersion = 12.5;
@@ -281,10 +335,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				6E30BEA12668D73A008651EF /* String+Extension.swift in Sources */,
+				6E30BEA92668DC7C008651EF /* UIColor+Hex.m in Sources */,
+				6E30BEAF2668DDAD008651EF /* CountDown.m in Sources */,
+				6E30BEB32668E04C008651EF /* UIView+Extension.swift in Sources */,
 				6E30BE732668D671008651EF /* ViewController.swift in Sources */,
 				6E30BE6F2668D671008651EF /* AppDelegate.swift in Sources */,
 				6E30BE712668D671008651EF /* SceneDelegate.swift in Sources */,
+				6E30BEB52668E09F008651EF /* UIImage+Extension.swift in Sources */,
 				6E30BEA32668DBB5008651EF /* UIColor+Extension.swift in Sources */,
+				6E30BEB22668E04C008651EF /* UITableView+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -460,6 +519,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4K3MMY2CZ5;
 				INFOPLIST_FILE = ToolClass/Info.plist;
@@ -469,6 +529,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = cdd.tool.ToolClass;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/ToolClass/ToolClass-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -479,6 +541,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4K3MMY2CZ5;
 				INFOPLIST_FILE = ToolClass/Info.plist;
@@ -488,6 +551,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = cdd.tool.ToolClass;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/ToolClass/ToolClass-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

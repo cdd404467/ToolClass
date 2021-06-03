@@ -33,13 +33,13 @@ extension UIColor {
         range.location = 4
         let bString = (cString as NSString).substring(with: range)
         
-        var r: UInt32 = 0x0
-        var g: UInt32 = 0x0
-        var b: UInt32 = 0x0
+        var r: UInt64 = 0x0
+        var g: UInt64 = 0x0
+        var b: UInt64 = 0x0
         
-        Scanner(string: rString).scanHexInt32(&r)
-        Scanner(string: gString).scanHexInt32(&g)
-        Scanner(string: bString).scanHexInt32(&b)
+        Scanner(string: rString).scanHexInt64(&r)
+        Scanner(string: gString).scanHexInt64(&g)
+        Scanner(string: bString).scanHexInt64(&b)
         
         var a = alpha
         if (a > 1.0 || a < 1.0) {
