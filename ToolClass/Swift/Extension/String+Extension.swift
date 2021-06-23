@@ -9,13 +9,29 @@ import Foundation
 //解决小数点失真
 public extension String {
     @discardableResult
-    func correctPrecision() -> String {
-        let conversionValue: Double = Double(self) ?? 0
-        let doubleString = String.init(format: "%lf", conversionValue)
+    func correctPrecision(_ money: String) -> String {
+        if Help.isRightData(money) {
+            return ""
+        }
+        let conversionValue: Double = Double(money) ?? 0
+        let doubleString = String.init(format: "%.2lf", conversionValue)
         let decNumber = Decimal.init(string: doubleString)
         return decNumber!.description
     }
     
+}
+
+public extension NSString {
+    @discardableResult
+    @objc class func correctPrecision(_ money: NSString) -> NSString {
+        if Help.isRightData(money) {
+            return ""
+        }
+        let conversionValue: Double = Double(money as Substring) ?? 0
+        let doubleString = String.init(format: "%.2lf", conversionValue)
+        let decNumber = Decimal.init(string: doubleString)
+        return decNumber!.description as NSString
+    }
 }
 
 //截取字符串分类
