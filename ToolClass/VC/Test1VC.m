@@ -6,6 +6,7 @@
 //
 
 #import "Test1VC.h"
+#import "UIView+Effects.h"
 
 @interface Test1VC ()
 
@@ -14,10 +15,15 @@
 @implementation Test1VC
 
 - (void)viewDidLoad {
-    
     [super viewDidLoad];
+    self.view.backgroundColor = UIColor.whiteColor;
     
-    
+    UIImageView *view = UIImageView.alloc.init;
+    view.backgroundColor = UIColor.blackColor;
+    [self.view addSubview:view];
+    [view mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.top.width.height.mas_equalTo(100);
+    }];
     
     
 }

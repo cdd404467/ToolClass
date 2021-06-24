@@ -11,7 +11,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface NSString (Extension)
-+ (NSString *)correctPrecision:(NSString *)money;
+//+ (NSString *)correctPrecision:(NSString *)money;
 @end
 
 NS_ASSUME_NONNULL_END

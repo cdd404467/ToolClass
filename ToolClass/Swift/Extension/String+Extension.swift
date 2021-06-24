@@ -9,8 +9,8 @@ import Foundation
 //解决小数点失真
 public extension String {
     @discardableResult
-    func correctPrecision(_ money: String) -> String {
-        if Help.isRightData(money) {
+    static func correctPrecision(_ money: String) -> String {
+        if Help.isRightData(money) == false {
             return ""
         }
         let conversionValue: Double = Double(money) ?? 0
@@ -18,13 +18,12 @@ public extension String {
         let decNumber = Decimal.init(string: doubleString)
         return decNumber!.description
     }
-    
 }
 
 public extension NSString {
     @discardableResult
     @objc class func correctPrecision(_ money: NSString) -> NSString {
-        if Help.isRightData(money) {
+        if Help.isRightData(money) == false {
             return ""
         }
         let conversionValue: Double = Double(money as Substring) ?? 0

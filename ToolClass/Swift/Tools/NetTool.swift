@@ -110,7 +110,11 @@ public class NetTool {
 }
 
 extension NetTool {
-    func request(url:String, requestType:HTTPMethod = .post, parameters:[String: Any]? = nil, headers:[String: String]? = ["Authorization":""], encoding: ParameterEncoding = JSONEncoding.default) -> NetWorkRequest {
+    func request(url:String, method:HTTPMethod = .post, parameters:[String: Any]?) -> NetWorkRequest {
+        request(url: url, method: method, parameters: parameters, headers: nil, encoding: JSONEncoding.default)
+    }
+    
+    func request(url:String, method:HTTPMethod = .post, parameters:[String: Any]? = nil, headers:[String: String]? = nil, encoding: ParameterEncoding = JSONEncoding.default) -> NetWorkRequest {
 //        let urlString: String = NetMacro.getServerApi(url: url)
         let urlString: String = ""
         let task = NetWorkRequest()
@@ -118,17 +122,14 @@ extension NetTool {
         if let tempHeaders = headers {
             header = HTTPHeaders(tempHeaders)
         }
-        task.request = sessionManager.request(urlString, method: requestType, parameters: parameters ,encoding: encoding, headers: header).validate().responseJSON {response in
+        task.request = sessionManager.request(urlString, method: method, parameters: parameters ,encoding: encoding, headers: header).validate().responseJSON {response in
             task.handleResponse(response: response)
         }
+        
         return task
     }
     
-    func upload(url: String,
-                       method: HTTPMethod = .post,
-                       parameters: [String: String]?,
-                       datas: [MultipartData],
-                       headers: [String: String]? = nil) -> NetWorkRequest {
+    func upload(url: String, method: HTTPMethod = .post, parameters: [String: String]?, datas: [MultipartData], headers: [String: String]? = nil) -> NetWorkRequest {
         let task = NetWorkRequest()
 
         var h: HTTPHeaders?

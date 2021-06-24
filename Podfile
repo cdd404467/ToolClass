@@ -11,9 +11,10 @@ target 'ToolClass' do
 
   pod 'AFNetworking'
   pod "Alamofire"
-  pod 'AFNetworking'
+  pod 'Masonry'
+  pod 'SnapKit'
   pod 'SwiftyJSON'
-  
+  pod 'MBProgressHUD'
 
 
 
