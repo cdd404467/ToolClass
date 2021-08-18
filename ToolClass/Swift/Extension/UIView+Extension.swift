@@ -61,5 +61,16 @@ extension UIView {
 }
 
 extension UIView {
-    
+    private struct AssociatedKey {
+        static var identifier: String = "identifier"
+    }
+    var viewStrId: String {
+        get {
+            return objc_getAssociatedObject(self, &AssociatedKey.identifier) as? String ?? ""
+        }
+        
+        set {
+            objc_setAssociatedObject(self, &AssociatedKey.identifier, newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+        }
+    }
 }

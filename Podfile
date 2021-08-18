@@ -15,8 +15,8 @@ target 'ToolClass' do
   pod 'SnapKit'
   pod 'SwiftyJSON'
   pod 'MBProgressHUD'
-
-
+  pod 'MJRefresh'
+  pod 'ZLCollectionViewFlowLayout' 
 
 
   target 'ToolClassTests' do

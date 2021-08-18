@@ -10,4 +10,5 @@ import Foundation
 
 @_exported import SwiftyJSON
 @_exported import Alamofire
+@_exported import SnapKit
 

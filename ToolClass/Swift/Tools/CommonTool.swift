@@ -64,19 +64,52 @@ class Help: NSObject {
         #endif
     }
     
+    @objc class func dataType(_ object: Any?) -> Int {
+        guard let _ = object else {
+            return 0
+        }
+        
+        if object is NSString {
+            let str: String = object as? String ?? ""
+            if str == "null" || str == "<null>" || str == "(null)" || str.isEmpty == true || str.count == 0 {
+                return -1
+            }
+        } else if object is Array<Any> {
+            let array = object as! Array<Any>
+            if array.count == 0 {
+                return -2
+            }
+        } else if object is NSDictionary {
+            let dict: Dictionary = object as! Dictionary<String, Any>
+            if dict.count == 0 {
+                return -3
+            }
+        }
+        else {
+            if object is NSNull || object == nil {
+                return -4
+            }
+        }
+        return 1
+    }
+    
     //数据是否有效
-    @objc class func isRightData(_ object: Any) -> Bool {
-        if object is String {
-            let str: String = object as! String
-            if str == "null" || str == "<null>" || str == "(null)" {
-                return false
-            }
-            return true
-        } else {
-            if object is NSNull {
-                return false
-            }
-            return true
+    @discardableResult
+    @objc class func isRightData(_ object: Any?) -> Bool {
+        return dataType(object) > 0 ? true : false
+    }
+    
+    @discardableResult
+    @objc class func safeData(_ object: Any?) -> Any {
+        switch dataType(object) {
+        case 0,-1,-4:
+            return ""
+        case -2:
+            return []
+        case -3:
+            return [:]
+        default:
+            return object as Any
         }
     }
 }

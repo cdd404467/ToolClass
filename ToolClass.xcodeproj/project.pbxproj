@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		1DCA576332628249A2E715E9 /* Pods_ToolClass.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE2055F7208EC14A2918DDFC /* Pods_ToolClass.framework */; };
 		4DFA69ABA864D4DC50EE76CB /* Pods_ToolClassTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEEF518E9579B29DB841D7CB /* Pods_ToolClassTests.framework */; };
+		6E0B373A2688294300347A63 /* TestView1.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E0B37392688294300347A63 /* TestView1.m */; };
 		6E30BE6F2668D671008651EF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E30BE6E2668D671008651EF /* AppDelegate.swift */; };
 		6E30BE712668D671008651EF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E30BE702668D671008651EF /* SceneDelegate.swift */; };
 		6E30BE732668D671008651EF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E30BE722668D671008651EF /* ViewController.swift */; };
@@ -37,6 +38,18 @@
 		6E80A9002682F52200DD5689 /* NSString+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E80A8FF2682F52200DD5689 /* NSString+Extension.m */; };
 		6E80A90826831D4E00DD5689 /* CommonTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E80A90726831D4D00DD5689 /* CommonTool.swift */; };
 		6E80A90A2683295400DD5689 /* NetTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E80A9092683295400DD5689 /* NetTool.swift */; };
+		6E83D61526C97E0A0069F46F /* TestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E83D61426C97E0A0069F46F /* TestModel.swift */; };
+		6E83E6D126B2D376000F422F /* Test2VC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E83E6D026B2D376000F422F /* Test2VC.m */; };
+		6E8782A626B55AD000442F06 /* UIScrollView+MJRefreshExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E8782A426B55AD000442F06 /* UIScrollView+MJRefreshExtension.m */; };
+		6E90BACC26CBBFE200E26E21 /* ExpandButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E90BACB26CBBFE200E26E21 /* ExpandButton.swift */; };
+		6EE082DB26A52AB3002696ED /* PaddingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EE082DA26A52AB3002696ED /* PaddingLabel.swift */; };
+		6EE082DE26A52B1B002696ED /* PaddingLabelOC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EE082DD26A52B1B002696ED /* PaddingLabelOC.m */; };
+		6EE0849026AAB989002696ED /* MacroFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EE0848F26AAB989002696ED /* MacroFile.swift */; };
+		6EE0849226AAB9B4002696ED /* PublicPara.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EE0849126AAB9B4002696ED /* PublicPara.swift */; };
+		6EE0849B26AABA04002696ED /* WaterTagflowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EE0849326AABA04002696ED /* WaterTagflowLayout.m */; };
+		6EE0849C26AABA04002696ED /* WaterTagModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EE0849726AABA04002696ED /* WaterTagModel.m */; };
+		6EE0849D26AABA04002696ED /* WaterflowTagCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EE0849826AABA04002696ED /* WaterflowTagCell.m */; };
+		6EE0849E26AABA04002696ED /* TagsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EE0849A26AABA04002696ED /* TagsView.m */; };
 		CDA83C687C6A19D4733E7791 /* Pods_ToolClass_ToolClassUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AB4E5BDCE8ED19A0297B64E /* Pods_ToolClass_ToolClassUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -61,6 +74,8 @@
 		18269A0FDEDB13F3914B2A8B /* Pods-ToolClass-ToolClassUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ToolClass-ToolClassUITests.release.xcconfig"; path = "Target Support Files/Pods-ToolClass-ToolClassUITests/Pods-ToolClass-ToolClassUITests.release.xcconfig"; sourceTree = "<group>"; };
 		37ABEFB61C28C406CAD17181 /* Pods-ToolClassTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ToolClassTests.release.xcconfig"; path = "Target Support Files/Pods-ToolClassTests/Pods-ToolClassTests.release.xcconfig"; sourceTree = "<group>"; };
 		69E28017A4D48D20F7251BE3 /* Pods-ToolClass.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ToolClass.debug.xcconfig"; path = "Target Support Files/Pods-ToolClass/Pods-ToolClass.debug.xcconfig"; sourceTree = "<group>"; };
+		6E0B37382688294300347A63 /* TestView1.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestView1.h; sourceTree = "<group>"; };
+		6E0B37392688294300347A63 /* TestView1.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestView1.m; sourceTree = "<group>"; };
 		6E30BE6B2668D671008651EF /* ToolClass.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToolClass.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E30BE6E2668D671008651EF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6E30BE702668D671008651EF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -106,6 +121,25 @@
 		6E80A8FF2682F52200DD5689 /* NSString+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Extension.m"; sourceTree = "<group>"; };
 		6E80A90726831D4D00DD5689 /* CommonTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonTool.swift; sourceTree = "<group>"; };
 		6E80A9092683295400DD5689 /* NetTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetTool.swift; sourceTree = "<group>"; };
+		6E83D61426C97E0A0069F46F /* TestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestModel.swift; sourceTree = "<group>"; };
+		6E83E6CF26B2D376000F422F /* Test2VC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Test2VC.h; sourceTree = "<group>"; };
+		6E83E6D026B2D376000F422F /* Test2VC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Test2VC.m; sourceTree = "<group>"; };
+		6E8782A426B55AD000442F06 /* UIScrollView+MJRefreshExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+MJRefreshExtension.m"; sourceTree = "<group>"; };
+		6E8782A526B55AD000442F06 /* UIScrollView+MJRefreshExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+MJRefreshExtension.h"; sourceTree = "<group>"; };
+		6E90BACB26CBBFE200E26E21 /* ExpandButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandButton.swift; sourceTree = "<group>"; };
+		6EE082DA26A52AB3002696ED /* PaddingLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaddingLabel.swift; sourceTree = "<group>"; };
+		6EE082DC26A52B1B002696ED /* PaddingLabelOC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PaddingLabelOC.h; sourceTree = "<group>"; };
+		6EE082DD26A52B1B002696ED /* PaddingLabelOC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PaddingLabelOC.m; sourceTree = "<group>"; };
+		6EE0848F26AAB989002696ED /* MacroFile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MacroFile.swift; sourceTree = "<group>"; };
+		6EE0849126AAB9B4002696ED /* PublicPara.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PublicPara.swift; sourceTree = "<group>"; };
+		6EE0849326AABA04002696ED /* WaterTagflowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WaterTagflowLayout.m; sourceTree = "<group>"; };
+		6EE0849426AABA04002696ED /* WaterTagflowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WaterTagflowLayout.h; sourceTree = "<group>"; };
+		6EE0849526AABA04002696ED /* TagsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TagsView.h; sourceTree = "<group>"; };
+		6EE0849626AABA04002696ED /* WaterTagModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WaterTagModel.h; sourceTree = "<group>"; };
+		6EE0849726AABA04002696ED /* WaterTagModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WaterTagModel.m; sourceTree = "<group>"; };
+		6EE0849826AABA04002696ED /* WaterflowTagCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WaterflowTagCell.m; sourceTree = "<group>"; };
+		6EE0849926AABA04002696ED /* WaterflowTagCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WaterflowTagCell.h; sourceTree = "<group>"; };
+		6EE0849A26AABA04002696ED /* TagsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TagsView.m; sourceTree = "<group>"; };
 		748673159AD2C38670576AFA /* Pods-ToolClass.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ToolClass.release.xcconfig"; path = "Target Support Files/Pods-ToolClass/Pods-ToolClass.release.xcconfig"; sourceTree = "<group>"; };
 		8AB4E5BDCE8ED19A0297B64E /* Pods_ToolClass_ToolClassUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ToolClass_ToolClassUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABC932F4F3D76821E0BF6720 /* Pods-ToolClass-ToolClassUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ToolClass-ToolClassUITests.debug.xcconfig"; path = "Target Support Files/Pods-ToolClass-ToolClassUITests/Pods-ToolClass-ToolClassUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -155,6 +189,15 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		6E0B37352688291700347A63 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				6E0B37382688294300347A63 /* TestView1.h */,
+				6E0B37392688294300347A63 /* TestView1.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		6E30BE622668D671008651EF = {
 			isa = PBXGroup;
 			children = (
@@ -180,6 +223,8 @@
 		6E30BE6D2668D671008651EF /* ToolClass */ = {
 			isa = PBXGroup;
 			children = (
+				6E83D61326C97DF40069F46F /* Model */,
+				6E0B37352688291700347A63 /* View */,
 				6E80A90B26836EE900DD5689 /* VC */,
 				6E30BE9E2668D6E3008651EF /* Swift */,
 				6E30BE9F2668D6FA008651EF /* OC */,
@@ -225,6 +270,7 @@
 		6E30BE9F2668D6FA008651EF /* OC */ = {
 			isa = PBXGroup;
 			children = (
+				6EE083F026A85097002696ED /* Libs */,
 				6E30BEAC2668DD9B008651EF /* Class */,
 				6E30BEAA2668DD6C008651EF /* Tools */,
 				6E30BEA52668DC62008651EF /* Category */,
@@ -248,6 +294,8 @@
 		6E30BEA52668DC62008651EF /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				6E8782A526B55AD000442F06 /* UIScrollView+MJRefreshExtension.h */,
+				6E8782A426B55AD000442F06 /* UIScrollView+MJRefreshExtension.m */,
 				6E76FEDC2684B81C0024CAD8 /* UIButton+Extension.h */,
 				6E76FEDD2684B81C0024CAD8 /* UIButton+Extension.m */,
 				6E76FEC5268457BD0024CAD8 /* Hud.h */,
@@ -276,6 +324,8 @@
 		6E30BEAC2668DD9B008651EF /* Class */ = {
 			isa = PBXGroup;
 			children = (
+				6EE082DC26A52B1B002696ED /* PaddingLabelOC.h */,
+				6EE082DD26A52B1B002696ED /* PaddingLabelOC.m */,
 				6E30BEAD2668DDAD008651EF /* CountDown.h */,
 				6E30BEAE2668DDAD008651EF /* CountDown.m */,
 			);
@@ -294,6 +344,8 @@
 		6E6BE39A2680C57D0044DA92 /* Class */ = {
 			isa = PBXGroup;
 			children = (
+				6EE082DA26A52AB3002696ED /* PaddingLabel.swift */,
+				6E90BACB26CBBFE200E26E21 /* ExpandButton.swift */,
 			);
 			path = Class;
 			sourceTree = "<group>";
@@ -301,6 +353,8 @@
 		6E6BE39B2680C58D0044DA92 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				6EE0849126AAB9B4002696ED /* PublicPara.swift */,
+				6EE0848F26AAB989002696ED /* MacroFile.swift */,
 				6E76FEBC26843B540024CAD8 /* SwiftPch.swift */,
 				6E80A9092683295400DD5689 /* NetTool.swift */,
 				6E80A90726831D4D00DD5689 /* CommonTool.swift */,
@@ -316,8 +370,41 @@
 				6E30BE722668D671008651EF /* ViewController.swift */,
 				6E30BEC22669CE61008651EF /* Test1VC.h */,
 				6E30BEC32669CE61008651EF /* Test1VC.m */,
+				6E83E6CF26B2D376000F422F /* Test2VC.h */,
+				6E83E6D026B2D376000F422F /* Test2VC.m */,
 			);
 			path = VC;
+			sourceTree = "<group>";
+		};
+		6E83D61326C97DF40069F46F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				6E83D61426C97E0A0069F46F /* TestModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		6EE083F026A85097002696ED /* Libs */ = {
+			isa = PBXGroup;
+			children = (
+				6EE083F126A8509D002696ED /* TagsView */,
+			);
+			path = Libs;
+			sourceTree = "<group>";
+		};
+		6EE083F126A8509D002696ED /* TagsView */ = {
+			isa = PBXGroup;
+			children = (
+				6EE0849526AABA04002696ED /* TagsView.h */,
+				6EE0849A26AABA04002696ED /* TagsView.m */,
+				6EE0849926AABA04002696ED /* WaterflowTagCell.h */,
+				6EE0849826AABA04002696ED /* WaterflowTagCell.m */,
+				6EE0849426AABA04002696ED /* WaterTagflowLayout.h */,
+				6EE0849326AABA04002696ED /* WaterTagflowLayout.m */,
+				6EE0849626AABA04002696ED /* WaterTagModel.h */,
+				6EE0849726AABA04002696ED /* WaterTagModel.m */,
+			);
+			path = TagsView;
 			sourceTree = "<group>";
 		};
 		A3625999BE7BD92E13379E2F /* Frameworks */ = {
@@ -571,24 +658,37 @@
 			files = (
 				6E30BEBC2669CCAF008651EF /* UITextField+Limit.m in Sources */,
 				6E30BEA12668D73A008651EF /* String+Extension.swift in Sources */,
+				6E0B373A2688294300347A63 /* TestView1.m in Sources */,
 				6E30BEA92668DC7C008651EF /* UIColor+Hex.m in Sources */,
+				6EE0849D26AABA04002696ED /* WaterflowTagCell.m in Sources */,
+				6EE082DB26A52AB3002696ED /* PaddingLabel.swift in Sources */,
 				6E76FEDB2684B3210024CAD8 /* UIButton+Extension.swift in Sources */,
+				6E83E6D126B2D376000F422F /* Test2VC.m in Sources */,
 				6E76FEDE2684B81C0024CAD8 /* UIButton+Extension.m in Sources */,
 				6E30BEAF2668DDAD008651EF /* CountDown.m in Sources */,
+				6EE0849226AAB9B4002696ED /* PublicPara.swift in Sources */,
 				6E6BE39D2680C5BC0044DA92 /* SystemVersion.swift in Sources */,
 				6E30BEB32668E04C008651EF /* UIView+Extension.swift in Sources */,
+				6EE0849C26AABA04002696ED /* WaterTagModel.m in Sources */,
 				6E80A8D72681B6D300DD5689 /* TimeAbout.swift in Sources */,
+				6E8782A626B55AD000442F06 /* UIScrollView+MJRefreshExtension.m in Sources */,
 				6E76FEC7268457BD0024CAD8 /* Hud.m in Sources */,
 				6E80A90A2683295400DD5689 /* NetTool.swift in Sources */,
+				6E90BACC26CBBFE200E26E21 /* ExpandButton.swift in Sources */,
 				6E30BE732668D671008651EF /* ViewController.swift in Sources */,
 				6E30BEC42669CE61008651EF /* Test1VC.m in Sources */,
 				6E80A90826831D4E00DD5689 /* CommonTool.swift in Sources */,
+				6EE0849B26AABA04002696ED /* WaterTagflowLayout.m in Sources */,
+				6EE082DE26A52B1B002696ED /* PaddingLabelOC.m in Sources */,
 				6E30BE6F2668D671008651EF /* AppDelegate.swift in Sources */,
 				6E76FEBD26843B540024CAD8 /* SwiftPch.swift in Sources */,
 				6E30BE712668D671008651EF /* SceneDelegate.swift in Sources */,
+				6E83D61526C97E0A0069F46F /* TestModel.swift in Sources */,
+				6EE0849E26AABA04002696ED /* TagsView.m in Sources */,
 				6E30BEB52668E09F008651EF /* UIImage+Extension.swift in Sources */,
 				6E76FEC026844B5E0024CAD8 /* UIView+Effects.m in Sources */,
 				6E80A8ED2681E23800DD5689 /* NetToolOC.m in Sources */,
+				6EE0849026AAB989002696ED /* MacroFile.swift in Sources */,
 				6E30BEA32668DBB5008651EF /* UIColor+Extension.swift in Sources */,
 				6E30BEB22668E04C008651EF /* UITableView+Extension.swift in Sources */,
 				6E80A9002682F52200DD5689 /* NSString+Extension.m in Sources */,

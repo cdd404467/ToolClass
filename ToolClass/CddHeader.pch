@@ -18,5 +18,6 @@
 #import "ToolClass-Bridging-Header.h"
 #import "ToolClass-Swift.h"
 #import <Masonry.h>
+#import "NSString+Extension.h"
 
 #endif /* CddHeader_pch */
