@@ -34,13 +34,25 @@ class ViewController: UIViewController {
         
         
         
-//        let str: NSString = "0.89999"
+        var arr = [1,2,3,4,5,6]
+        var arr_1: [Int] {
+            get {
+                for i in 0..<arr.count {
+                    if i % 2 == 0 {
+                        arr.swapAt(i, i+1)
+                    }
+                    
+                }
+                return arr
+            }
+            set {}
+        }
         
         
         
         
-        print()
-        test()
+        
+      
 //
 //        if #available(iOS 8, *) {
 //            if (pp == CGSize.zero) {
@@ -64,7 +76,7 @@ class ViewController: UIViewController {
         view.addSubview(btn)
         btn.frame = CGRect.init(x: 110, y: 400, width: 100, height: 100)
         btn.backgroundColor = .red
-        btn.imagePosition(at: .left, space: 50)
+//        btn.imagePosition(at: .left, space: 50)
         btn.addTarget(self, action: #selector(jump), for: .touchUpInside)
         btn.snp.makeConstraints { m in
             m.left.equalTo(110)
@@ -81,7 +93,7 @@ class ViewController: UIViewController {
     @objc
     func jump() {
         print("---- pppp")
-//        navigationController?.pushViewController(Test1VC.init(), animated: true)
+        navigationController?.pushViewController(Test1VC.init(), animated: true)
     }
     
 }

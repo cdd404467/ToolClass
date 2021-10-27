@@ -10,6 +10,7 @@
 #import "TestView1.h"
 #import "PaddingLabelOC.h"
 #import "Test2VC.h"
+#import "TBarVC.h"
 
 @interface Test1VC ()
 @property (nonatomic, strong)NSMutableArray *mArr;
@@ -22,19 +23,52 @@
     self.title = @"1";
     self.view.backgroundColor = UIColor.whiteColor;
     
-    NSLog(@"------- %@",[NSString notRounding:0.80]);
-    UIButton *b = [UIButton new];
     
-    [b imagePositionAt:ButtonImageEdgeInsetsStyleTop space:9];
+    
+    
+    [self test11];
+//    NSLog(@"------- %@",[NSString notRounding:0.80]);
 }
 
 
+- (void)test11 {
+    
+    
+    
+    UIButton *shoppingCarBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    shoppingCarBtn.titleLabel.font = [UIFont systemFontOfSize:11];
+    [shoppingCarBtn setTitleColor:UIColor.blackColor forState:UIControlStateNormal];
+    [shoppingCarBtn setTitle:@"购物车" forState:UIControlStateNormal];
+    [shoppingCarBtn setImage:[UIImage imageNamed:@"icon_test2"] forState:UIControlStateNormal];
+    [self.view addSubview:shoppingCarBtn];
+    shoppingCarBtn.frame = CGRectMake(100, 200, 44, 44);
+//    [shoppingCarBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.centerY.equalTo(rightView);
+//        make.right.mas_equalTo(-15);
+//        make.width.mas_equalTo(44);
+//        make.height.mas_equalTo(44);
+//    }];
+    shoppingCarBtn.titleLabel.backgroundColor = UIColor.whiteColor;
+    shoppingCarBtn.imageView.backgroundColor = UIColor.blueColor;
+    [shoppingCarBtn imagePositionAt:ButtonImageEdgeInsetsStyleTop space:1];
+//    [shoppingCarBtn layoutWithEdgeInsetsStyle:ButtonEdgeInsetsStyleTop imageTitleSpace:1];
+    shoppingCarBtn.backgroundColor = UIColor.redColor;
+        
+}
+
+
+
+
+
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
-    Test2VC *vc = Test2VC.alloc.init;
-    vc.pArr = self.mArr;
-    vc.clickB = ^{
-        NSLog(@"----- %ld",self.mArr.count);
-    };
+//    Test2VC *vc = Test2VC.alloc.init;
+//    vc.pArr = self.mArr;
+//    vc.clickB = ^{
+//        NSLog(@"----- %ld",self.mArr.count);
+//    };
+//    [self.navigationController pushViewController:vc animated:YES];
+    TBarVC *vc = TBarVC.alloc.init;
+    vc.name = @"ddd";
     [self.navigationController pushViewController:vc animated:YES];
 }
 

@@ -51,8 +51,6 @@
 
     NSDecimalNumber *roundedOunces;
 
-    
-
     ouncesDecimal = [[NSDecimalNumber alloc] initWithFloat:price];
 
     roundedOunces = [ouncesDecimal decimalNumberByRoundingAccordingToBehavior:roundingBehavior];

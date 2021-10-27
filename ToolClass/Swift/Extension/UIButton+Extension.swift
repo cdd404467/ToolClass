@@ -29,13 +29,14 @@ public extension UIButton {
         var imageEdgeInsets = UIEdgeInsets.zero
         var labelEdgeInsets = UIEdgeInsets.zero
         
-        if #available(iOS 8, *), titleL.frame.size == CGSize.zero {
+        if #available(iOS 8, *) {
             labelWidth = titleL.intrinsicContentSize.width
             labelHeight = titleL.intrinsicContentSize.height
         } else {
             labelWidth = titleL.frame.size.width
             labelHeight = titleL.frame.size.height
         }
+        
         
         switch style {
         case .left:
@@ -64,7 +65,6 @@ public extension UIButton {
             */
             imageEdgeInsets = UIEdgeInsets(top: -imageHeight * 0.5 - space * 0.5, left: labelWidth * 0.5, bottom: imageHeight * 0.5 + space * 0.5, right: -labelWidth * 0.5)
             labelEdgeInsets = UIEdgeInsets(top: labelHeight * 0.5 + space * 0.5, left: -imageWidth * 0.5, bottom: -labelHeight * 0.5 - space * 0.5, right: imageWidth * 0.5)
-            
         case .bottom:
             //切换位置--下图像上文字
             /**图像的中心位置向右移动了labelWidth * 0.5，向下移动了imageHeight * 0.5 + space * 0.5
@@ -73,6 +73,7 @@ public extension UIButton {
             imageEdgeInsets = UIEdgeInsets(top: imageHeight * 0.5 + space * 0.5, left: labelWidth * 0.5, bottom: -imageHeight * 0.5 - space * 0.5, right: -labelWidth * 0.5)
             labelEdgeInsets = UIEdgeInsets(top: -labelHeight * 0.5 - space * 0.5, left: -imageWidth * 0.5, bottom: labelHeight * 0.5 + space * 0.5, right: imageWidth * 0.5)
         }
+        
         self.titleEdgeInsets = labelEdgeInsets
         self.imageEdgeInsets = imageEdgeInsets
     }
