@@ -19,6 +19,8 @@ typedef NS_ENUM(NSUInteger, ButtonEdgeInsetsStyle) {
 
 @interface UIButton (Extension)
 
+@property (nonatomic,assign) UIEdgeInsets touchEdgeInsets;//点击区域，默认为（0，0，0，0）;
+
 /**
  *  设置button的titleLabel和imageView的布局样式，及间距
  *

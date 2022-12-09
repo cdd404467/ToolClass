@@ -53,7 +53,8 @@
     [shoppingCarBtn imagePositionAt:ButtonImageEdgeInsetsStyleTop space:1];
 //    [shoppingCarBtn layoutWithEdgeInsetsStyle:ButtonEdgeInsetsStyleTop imageTitleSpace:1];
     shoppingCarBtn.backgroundColor = UIColor.redColor;
-        
+    [shoppingCarBtn addTarget:self action:@selector(clickTest) forControlEvents:UIControlEventTouchUpInside];
+    shoppingCarBtn.touchEdgeInsets = UIEdgeInsetsMake(10, 20, 30, 40);
 }
 
 
@@ -67,15 +68,19 @@
 //        NSLog(@"----- %ld",self.mArr.count);
 //    };
 //    [self.navigationController pushViewController:vc animated:YES];
-    TBarVC *vc = TBarVC.alloc.init;
-    vc.name = @"ddd";
-    [self.navigationController pushViewController:vc animated:YES];
+//    TBarVC *vc = TBarVC.alloc.init;
+//    vc.name = @"ddd";
+//    [self.navigationController pushViewController:vc animated:YES];
 }
 
 - (void)test1 {
     TestView1 *view = [[TestView1 alloc] initWithFrame:CGRectMake(10, 200, 300, 500)];
     [self.view addSubview:view];
     
+}
+
+- (void)clickTest {
+    NSLog(@"qwer ---- cdd click");
 }
 
 

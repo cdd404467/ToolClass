@@ -10,7 +10,7 @@
 #import <objc/runtime.h>
 
 typedef void(^ButtonEventsBlock)(void);
-
+static const NSString *Key_TouchEdgeInsets = @"touchEdgeInsets";
 @interface UIButton()
 /** 事件回调的block */
 @property (nonatomic, copy) ButtonEventsBlock buttonEventsBlock;
@@ -111,6 +111,37 @@ static void *my_buttonEventsBlockKey = &my_buttonEventsBlockKey;
     [self setTitle:title forState:UIControlStateNormal];
     [self setTitleColor:color forState:UIControlStateNormal];
     self.titleLabel.font = [UIFont systemFontOfSize:font];
+}
+
+#pragma mark - 扩大点击区域
+- (BOOL)pointInside:(CGPoint)point withEvent:(UIEvent *)event
+{
+    if(UIEdgeInsetsEqualToEdgeInsets(self.touchEdgeInsets, UIEdgeInsetsZero) || !self.enabled || self.hidden)
+    {
+        return [super pointInside:point withEvent:event];
+    }
+    
+    CGRect relativeFrame = self.bounds;
+    CGRect hitFrame = UIEdgeInsetsInsetRect(relativeFrame, self.touchEdgeInsets);
+    
+    return CGRectContainsPoint(hitFrame, point);
+}
+
+- (void)setTouchEdgeInsets:(UIEdgeInsets)touchEdgeInsets {
+    UIEdgeInsets edges = UIEdgeInsetsMake(-touchEdgeInsets.top, -touchEdgeInsets.left, -touchEdgeInsets.bottom, -touchEdgeInsets.right);
+    NSValue *value = [NSValue value:&edges withObjCType:@encode(UIEdgeInsets)];
+    objc_setAssociatedObject(self, &Key_TouchEdgeInsets, value, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+}
+
+- (UIEdgeInsets)touchEdgeInsets {
+    NSValue *value = objc_getAssociatedObject(self, &Key_TouchEdgeInsets);
+    if(value){
+        UIEdgeInsets edgeInsets;
+        [value getValue:&edgeInsets];
+        return edgeInsets;
+    } else {
+        return UIEdgeInsetsZero;
+    }
 }
 
 @end
