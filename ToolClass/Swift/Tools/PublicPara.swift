@@ -12,47 +12,89 @@ import Foundation
 //被OC和swift同时调用的用类方法，只swift调用的用属性
 public class UIFit: NSObject {
     
-    @objc class func screen_bounds() -> CGRect {
+    class func screen_bounds() -> CGRect {
         UIScreen.main.bounds
     }
     
-    @objc class func screen_width() -> CGFloat {
+    class func screen_width() -> CGFloat {
         UIScreen.main.bounds.width
     }
     
-    @objc class func screen_height() -> CGFloat {
+    class func screen_height() -> CGFloat {
         UIScreen.main.bounds.height
     }
     
-    @objc class func isIphoneX() -> Bool {
+    class func isIphoneX() -> Bool {
         max(screen_width(), screen_height()) > 736 ? true : false
     }
     
-    @objc class func stateBar_height() -> CGFloat {
-        isIphoneX() ? 44.0 : 20.0
+    //上方安全区域
+    class func topSaveArea_height() -> CGFloat {
+        if #available(iOS 13.0, *) {
+            let scene = UIApplication.shared.connectedScenes.first
+            guard let windowScene = scene as? UIWindowScene else {return 0}
+            guard let window = windowScene.windows.first else {return 0}
+            return window.safeAreaInsets.top
+        }
+        return 0
     }
     
-    @objc class func tabBar_height() -> CGFloat {
-        isIphoneX() ? 83.0 : 49.0
+    //下方安全区域
+    class func bottomSaveArea_height() -> CGFloat {
+        if #available(iOS 13.0, *) {
+            let scene = UIApplication.shared.connectedScenes.first
+            guard let windowScene = scene as? UIWindowScene else {return 0}
+            guard let window = windowScene.windows.first else {return 0}
+            return window.safeAreaInsets.bottom
+        }
+        return 0
     }
     
-    @objc class func nav_height() -> CGFloat {
-        isIphoneX() ? 88.0 : 64.0
+    class func stateBar_height() -> CGFloat {
+        var statusBarHeight: CGFloat = 0.0
+        
+            
+        if #available(iOS 13.0, *) {
+            let scene = UIApplication.shared.connectedScenes.first
+            guard let windowScene = scene as? UIWindowScene else {return 0}
+            guard let statusBarManager = windowScene.statusBarManager else {return 0}
+//            let window = UIApplication.shared.windows.filter {$0.isKeyWindow}.first
+//            statusBarHeight = window?.windowScene?.statusBarManager?.statusBarFrame.height ?? 0
+            statusBarHeight = statusBarManager.statusBarFrame.height
+        } else {
+            statusBarHeight = UIApplication.shared.statusBarFrame.height
+        }
+        return statusBarHeight
+//        isIphoneX() ? 44.0 : 20.0
     }
     
-    @objc class func top_height_dif() -> CGFloat {
-        isIphoneX() ? 24.0 : 0
+    class func navBar_height() -> CGFloat {
+        return 44.0
     }
     
-    @objc class func bottom_height_dif() -> CGFloat {
-        isIphoneX() ? 34.0 : 0
+    class func tabBar_height() -> CGFloat {
+        
+        isIphoneX() ? bottomSaveArea_height() + 49.0 : 49.0
     }
     
-    @objc class func kfit_w(_ variate: CGFloat) -> CGFloat {
+    class func nav_height() -> CGFloat {
+        stateBar_height() + navBar_height()
+//        isIphoneX() ? 88.0 : 64.0
+    }
+    
+    class func top_height_dif() -> CGFloat {
+        isIphoneX() ? topSaveArea_height() : 0
+    }
+    
+    class func bottom_height_dif() -> CGFloat {
+        isIphoneX() ? bottomSaveArea_height() : 0
+    }
+    
+    class func kfit_w(_ variate: CGFloat) -> CGFloat {
         return variate * screen_width() / 375
     }
     
-    @objc class func kfit_h(_ variate: CGFloat) -> CGFloat {
+    class func kfit_h(_ variate: CGFloat) -> CGFloat {
         return variate * screen_height() / 667
     }
     

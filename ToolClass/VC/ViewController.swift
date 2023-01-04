@@ -62,8 +62,39 @@ class ViewController: UIViewController {
 //                print("2222")
 //            }
 //        }
+        print("--- \(b)")
         
+    }
+    
+    
+    var a: Int {
+        if SCREEN_WIDTH > 300 {
+            return 3
+        } else {
+            return 4
+        }
+    }
+    
+    var b: Int {
         
+        let c = a
+        if SCREEN_WIDTH > 500 {
+            return c
+        } else {
+            return 5
+        }
+    }
+    
+    
+    
+    func cdd() -> Int {
+        return 1
+    }
+    
+    func cdd1() -> Int {
+        let _ = cdd()
+        
+        return 2
     }
 
     
