@@ -48,10 +48,6 @@ class ViewController: UIViewController {
             set {}
         }
         
-        
-        
-        
-        
       
 //
 //        if #available(iOS 8, *) {
@@ -62,10 +58,30 @@ class ViewController: UIViewController {
 //                print("2222")
 //            }
 //        }
-        print("--- \(b)")
+//        print("--- \(b)")
         
+        
+        let digitNames = [
+             0: "Zero",1: "One",2: "Two",  3: "Three",4: "Four",
+             5: "Five",6: "Six",7: "Seven",8: "Eight",9: "Nine"
+          ]
+        
+        var num = 1993
+        var output = ""
+        var tempNum : Int
+        
+//        String(num)
+        
+        repeat {
+            tempNum = num % 10
+            output = digitNames[tempNum]! + output
+            num = num / 10
+        } while num > 0
+        
+        
+        
+        print("最后输出的是：\n\(output)")
     }
-    
     
     var a: Int {
         if SCREEN_WIDTH > 300 {
@@ -84,19 +100,6 @@ class ViewController: UIViewController {
             return 5
         }
     }
-    
-    
-    
-    func cdd() -> Int {
-        return 1
-    }
-    
-    func cdd1() -> Int {
-        let _ = cdd()
-        
-        return 2
-    }
-
     
     func test() {
         let btn = ExpandButton.init(type: .custom)

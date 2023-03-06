@@ -25,7 +25,14 @@ public extension UITableView {
         self.register(cellType.self, forCellReuseIdentifier: String(describing: cellType.self))
     }
       
-    
+    final func cddDequeueReusableHeaderFooter<T: UITableViewHeaderFooterView>(viewType: T.Type = T.self) -> T {
+        let reuseIdentifier = String(describing: viewType.self)
+        var view = self.dequeueReusableHeaderFooterView(withIdentifier: reuseIdentifier) as? T
+        if view == nil {
+            view = viewType.init(reuseIdentifier: reuseIdentifier)
+        }
+        return view!
+    }
     
     
     
