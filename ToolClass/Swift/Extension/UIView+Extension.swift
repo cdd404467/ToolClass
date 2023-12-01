@@ -63,14 +63,32 @@ extension UIView {
 extension UIView {
     private struct AssociatedKey {
         static var identifier: String = "identifier"
+        static var viewTypeId: String = "viewTypeId"
     }
     var viewStrId: String {
         get {
-            return objc_getAssociatedObject(self, &AssociatedKey.identifier) as? String ?? ""
+            return objc_getAssociatedObject(self, AssociatedKey.identifier) as? String ?? ""
         }
         
         set {
-            objc_setAssociatedObject(self, &AssociatedKey.identifier, newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+            objc_setAssociatedObject(self, AssociatedKey.identifier, newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
         }
     }
+    
+    
+    //渐变色
+    func setLayerColors(_ colors:[CGColor]) {
+        let gradientLocations:[NSNumber] = [0.0, 1.0]
+        
+        let gradientLayer = CAGradientLayer()
+        gradientLayer.colors = colors
+        gradientLayer.locations = gradientLocations
+        
+        gradientLayer.frame = self.bounds
+        
+        gradientLayer.startPoint = CGPoint(x: 0, y: 0)
+        gradientLayer.endPoint = CGPoint(x: 0, y: 0)
+        self.layer.addSublayer(gradientLayer)
+    }
+    
 }

@@ -31,7 +31,12 @@ class ViewController: UIViewController {
             make.top.equalTo(100)
             make.width.height.equalTo(100)
         }
+        lab.superview?.layoutIfNeeded()
         
+        let v = UIView()
+        v.backgroundColor = .red
+        v.frame = CGRect(x: lab.left, y: lab.bottom, width: lab.width, height: lab.height / 2)
+        view.addSubview(v)
         
         
         var arr = [1,2,3,4,5,6]

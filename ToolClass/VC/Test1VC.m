@@ -11,10 +11,11 @@
 #import "PaddingLabelOC.h"
 #import "Test2VC.h"
 #import "TBarVC.h"
+#import "MulticastDelegate.h"
 
-
-@interface Test1VC ()
+@interface Test1VC ()<MyDelegateProtocol>
 @property (nonatomic, strong)NSMutableArray *mArr;
+@property (nonatomic, strong) MulticastDelegate *delegateObject;
 @end
 
 @implementation Test1VC
@@ -24,6 +25,10 @@
     self.title = @"1";
     self.view.backgroundColor = UIColor.whiteColor;
     
+    self.delegateObject = [[MulticastDelegate alloc] init];
+        
+    // 将当前视图控制器设置为委托对象
+    [self.delegateObject addDelegate:self];
     
     
     [self test11];
@@ -31,7 +36,9 @@
 }
 
 
-
+- (void)didReceiveEvent:(NSString *)event {
+    NSLog(@"2222 -----  %@",event);
+}
 
 
 - (void)test11 {
@@ -89,21 +96,10 @@
 }
 
 - (void)visitPhoto {
-    UIAlertController* alert = [UIAlertController alertControllerWithTitle:@"提示" message:@"该app正在请求访问您的相册，是否同意访问?" preferredStyle:UIAlertControllerStyleAlert];
-    [self presentViewController:alert animated:YES completion:nil];
-    UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"是" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-        UIImagePickerController* imagePicker = [[UIImagePickerController alloc] init];
-        [self presentViewController:imagePicker animated:YES completion:nil];
-        imagePicker.delegate = self;
-        imagePicker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary; //数据来源于相册
-            NSLog(@"=======确认访问相册========");
-        }];
-    UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"否" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
-            NSLog(@"=======取消访问相册======");
-        }];
-
-    [alert addAction:okAction];
-    [alert addAction:cancelAction];
+    Test2VC *vc = [Test2VC new];
+    [vc.delegateObject addDelegate:self];
+    vc.delegateObject = self.delegateObject;
+    [self.navigationController pushViewController:vc animated:YES];
     
 }
 

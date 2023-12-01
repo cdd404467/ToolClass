@@ -14,7 +14,7 @@ PODS:
   - AFNetworking/Serialization (4.0.1)
   - AFNetworking/UIKit (4.0.1):
     - AFNetworking/NSURLSession
-  - Alamofire (5.4.3)
+  - Alamofire (5.8.0)
   - Masonry (1.1.0)
   - MBProgressHUD (1.2.0)
   - MJRefresh (3.6.1)
@@ -45,7 +45,7 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   AFNetworking: 3bd23d814e976cd148d7d44c3ab78017b744cd58
-  Alamofire: e447a2774a40c996748296fa2c55112fdbbc42f9
+  Alamofire: 0e92e751b3e9e66d7982db43919d01f313b8eb91
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MBProgressHUD: 3ee5efcc380f6a79a7cc9b363dd669c5e1ae7406
   MJRefresh: d2c1970d1cf6e77fcfcdfe76c943dfab8dbfa5c1
@@ -53,6 +53,6 @@ SPEC CHECKSUMS:
   SwiftyJSON: 2f33a42c6fbc52764d96f13368585094bfd8aa5e
   ZLCollectionViewFlowLayout: 44629363b7413343cd61d153839bfc7888d76b85
 
-PODFILE CHECKSUM: d2c24563fce8dbca797c7d27d48533ca6b10e886
+PODFILE CHECKSUM: 6af4abc2513dd18ceda325cd6c2350678e7412a5
 
-COCOAPODS: 1.11.3
+COCOAPODS: 1.12.1

@@ -7,7 +7,9 @@
 
 #import "Test2VC.h"
 
-@interface Test2VC ()
+#import "Test3VC.h"
+
+@interface Test2VC ()<MyDelegateProtocol>
 
 @end
 
@@ -17,22 +19,30 @@
     [super viewDidLoad];
     self.title = @"2";
     self.view.backgroundColor = UIColor.grayColor;
-    // Do any additional setup after loading the view.
+    self.delegateObject = [[MulticastDelegate alloc] init];
+        
+    // 将当前视图控制器设置为委托对象
+    
+ 
 }
 
-//- (NSMutableArray *)pArr {
-//    if (!_pArr) {
-//        _pArr = [NSMutableArray new];
-//    }
-//    return _pArr;
-//}
+- (void)didReceiveEvent:(NSString *)event {
+    NSLog(@"2222 -----  %@",event);
+}
+
+
+
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
 //    NSMutableArray *arr = self.pArr.mutableCopy;
     
-    if (self.clickB) {
-        self.clickB();
-    }
+//    if (self.clickB) {
+//        self.clickB();
+//    }
+    Test3VC *vc = [Test3VC new];
+    [vc.delegate addDelegate:self];
+    vc.delegate = self.delegateObject;
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 
