@@ -22,7 +22,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = @"1";
+    self.title = @"1111";
     self.view.backgroundColor = UIColor.whiteColor;
     
     self.delegateObject = [[MulticastDelegate alloc] init];
