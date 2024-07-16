@@ -21,7 +21,6 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         title = "首页"
-        
         let lab: UIButton = UIButton.init()
         lab.backgroundColor = .gray
         lab.addTarget(self, action: #selector(jump), for: .touchUpInside)

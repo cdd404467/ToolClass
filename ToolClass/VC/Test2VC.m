@@ -17,12 +17,15 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = @"2";
+    self.title = @"Test2";
     self.view.backgroundColor = UIColor.grayColor;
-    self.delegateObject = [[MulticastDelegate alloc] init];
-        
-    // 将当前视图控制器设置为委托对象
+    UIButton *btn = [UIButton buttonWithType:0];
+    btn.backgroundColor = UIColor.blackColor;
+    btn.frame = CGRectMake(100, 200, 44, 44);
+    [btn addTarget:self action:@selector(clickDe) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:btn];
     
+    [[MulticastDelegate shared] addDelegate:self];
  
 }
 
@@ -30,7 +33,9 @@
     NSLog(@"2222 -----  %@",event);
 }
 
-
+- (void)clickDe {
+    [MulticastDelegate.shared performDelegateMethod];
+}
 
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
@@ -40,8 +45,7 @@
 //        self.clickB();
 //    }
     Test3VC *vc = [Test3VC new];
-    [vc.delegate addDelegate:self];
-    vc.delegate = self.delegateObject;
+    
     [self.navigationController pushViewController:vc animated:YES];
 }
 

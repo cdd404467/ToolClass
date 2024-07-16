@@ -15,29 +15,33 @@
 
 @interface Test1VC ()<MyDelegateProtocol>
 @property (nonatomic, strong)NSMutableArray *mArr;
-@property (nonatomic, strong) MulticastDelegate *delegateObject;
+@property (nonatomic, strong)UIButton *openIcon;
 @end
 
 @implementation Test1VC
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = @"1111";
+    self.title = @"Test1";
     self.view.backgroundColor = UIColor.whiteColor;
     
-    self.delegateObject = [[MulticastDelegate alloc] init];
-        
-    // 将当前视图控制器设置为委托对象
-    [self.delegateObject addDelegate:self];
+    [[MulticastDelegate shared] addDelegate:self];
+    
+   
+//    [openIcon addTarget:self action:@selector(tapOpenAction) forControlEvents:UIControlEventTouchUpInside];
+    
+    
+
     
     
     [self test11];
-//    NSLog(@"------- %@",[NSString notRounding:0.80]);
 }
 
 
+
+
 - (void)didReceiveEvent:(NSString *)event {
-    NSLog(@"2222 -----  %@",event);
+    NSLog(@"1111 -----  %@",event);
 }
 
 
@@ -68,7 +72,19 @@
 }
 
 
-
+- (void)startRotateButton {
+//    self.openIcon.enabled = NO;
+    
+    CABasicAnimation *rotationAnimation = [CABasicAnimation animationWithKeyPath:@"transform.rotation.y"];
+    rotationAnimation.fromValue = [NSNumber numberWithFloat:0.0f];
+    rotationAnimation.toValue = [NSNumber numberWithFloat:2 * M_PI];
+    rotationAnimation.duration = 1;
+    rotationAnimation.repeatCount = 10000000;
+    rotationAnimation.removedOnCompletion = YES;
+    rotationAnimation.fillMode = kCAFillModeForwards;
+    [self.openIcon.layer addAnimation:rotationAnimation forKey:@"rotationAnimationY"];
+    
+}
 
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
@@ -81,6 +97,7 @@
 //    TBarVC *vc = TBarVC.alloc.init;
 //    vc.name = @"ddd";
 //    [self.navigationController pushViewController:vc animated:YES];
+    [self startRotateButton];
 }
 
 - (void)test1 {
@@ -98,7 +115,6 @@
 - (void)visitPhoto {
     Test2VC *vc = [Test2VC new];
     [vc.delegateObject addDelegate:self];
-    vc.delegateObject = self.delegateObject;
     [self.navigationController pushViewController:vc animated:YES];
     
 }

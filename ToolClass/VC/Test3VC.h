@@ -10,7 +10,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface Test3VC : UIViewController
-@property (nonatomic, strong) MulticastDelegate *delegate;
+
 @end
 
 NS_ASSUME_NONNULL_END

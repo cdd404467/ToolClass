@@ -6,7 +6,7 @@
 //
 
 #import "Test3VC.h"
-
+#import "Test2VC.h"
 
 @interface Test3VC ()<MyDelegateProtocol>
 
@@ -17,15 +17,19 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.delegate = [[MulticastDelegate alloc] init];
-    
+    self.view.backgroundColor = UIColor.whiteColor;
+    self.title = @"Test2";
+    [[MulticastDelegate shared] addDelegate:self];
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
-    [self.delegate performDelegateMethod];
+
+    [MulticastDelegate.shared performDelegateMethod];
 }
 
 
-
+- (void)didReceiveEvent:(NSString *)event {
+    NSLog(@"3333 -----  %@",event);
+}
 
 @end
