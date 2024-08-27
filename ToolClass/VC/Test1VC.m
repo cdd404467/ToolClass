@@ -22,7 +22,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = @"Test1 - name";
+    self.title = @"Test1";
     self.view.backgroundColor = UIColor.whiteColor;
     
     [[MulticastDelegate shared] addDelegate:self];

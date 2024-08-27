@@ -17,7 +17,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = @"Test2";
+    self.title = @"Test2 - cdd";
     self.view.backgroundColor = UIColor.grayColor;
     UIButton *btn = [UIButton buttonWithType:0];
     btn.backgroundColor = UIColor.blackColor;
