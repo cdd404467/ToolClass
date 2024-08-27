@@ -23,7 +23,7 @@
 		6E30BEA92668DC7C008651EF /* UIColor+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E30BEA82668DC7C008651EF /* UIColor+Hex.m */; };
 		6E30BEAF2668DDAD008651EF /* CountDown.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E30BEAE2668DDAD008651EF /* CountDown.m */; };
 		6E30BEB22668E04C008651EF /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E30BEB02668E04C008651EF /* UITableView+Extension.swift */; };
-		6E30BEB32668E04C008651EF /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E30BEB12668E04C008651EF /* UIView+Extension.swift */; };
+		6E30BEB32668E04C008651EF /* UIView+ExtensionS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E30BEB12668E04C008651EF /* UIView+ExtensionS.swift */; };
 		6E30BEB52668E09F008651EF /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E30BEB42668E09F008651EF /* UIImage+Extension.swift */; };
 		6E30BEBC2669CCAF008651EF /* UITextField+Limit.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E30BEBB2669CCAF008651EF /* UITextField+Limit.m */; };
 		6E30BEC42669CE61008651EF /* Test1VC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E30BEC32669CE61008651EF /* Test1VC.m */; };
@@ -54,6 +54,8 @@
 		A5120B102B0C7F75009B78EE /* MulticastDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A5120B0C2B0C7F74009B78EE /* MulticastDelegate.m */; };
 		A5120B132B0C82B1009B78EE /* Test3VC.m in Sources */ = {isa = PBXBuildFile; fileRef = A5120B122B0C82B1009B78EE /* Test3VC.m */; };
 		A512FFBF2C24082B00B52C44 /* TestInit.swift in Sources */ = {isa = PBXBuildFile; fileRef = A512FFBE2C24082B00B52C44 /* TestInit.swift */; };
+		A541CB362C7DD32B00C0EFBA /* HelpTool.m in Sources */ = {isa = PBXBuildFile; fileRef = A541CB352C7DD32B00C0EFBA /* HelpTool.m */; };
+		A541CB392C7DD36C00C0EFBA /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = A541CB382C7DD36C00C0EFBA /* UIView+Extension.m */; };
 		CDA83C687C6A19D4733E7791 /* Pods_ToolClass_ToolClassUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AB4E5BDCE8ED19A0297B64E /* Pods_ToolClass_ToolClassUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -102,7 +104,7 @@
 		6E30BEAD2668DDAD008651EF /* CountDown.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CountDown.h; sourceTree = "<group>"; };
 		6E30BEAE2668DDAD008651EF /* CountDown.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CountDown.m; sourceTree = "<group>"; };
 		6E30BEB02668E04C008651EF /* UITableView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
-		6E30BEB12668E04C008651EF /* UIView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		6E30BEB12668E04C008651EF /* UIView+ExtensionS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+ExtensionS.swift"; sourceTree = "<group>"; };
 		6E30BEB42668E09F008651EF /* UIImage+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
 		6E30BEBA2669CCAF008651EF /* UITextField+Limit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITextField+Limit.h"; sourceTree = "<group>"; };
 		6E30BEBB2669CCAF008651EF /* UITextField+Limit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITextField+Limit.m"; sourceTree = "<group>"; };
@@ -154,6 +156,10 @@
 		A5120B122B0C82B1009B78EE /* Test3VC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Test3VC.m; sourceTree = "<group>"; };
 		A5120B172B0C859C009B78EE /* MyDelegateProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyDelegateProtocol.h; sourceTree = "<group>"; };
 		A512FFBE2C24082B00B52C44 /* TestInit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestInit.swift; sourceTree = "<group>"; };
+		A541CB342C7DD32B00C0EFBA /* HelpTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelpTool.h; sourceTree = "<group>"; };
+		A541CB352C7DD32B00C0EFBA /* HelpTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HelpTool.m; sourceTree = "<group>"; };
+		A541CB372C7DD36C00C0EFBA /* UIView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extension.h"; sourceTree = "<group>"; };
+		A541CB382C7DD36C00C0EFBA /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
 		ABC932F4F3D76821E0BF6720 /* Pods-ToolClass-ToolClassUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ToolClass-ToolClassUITests.debug.xcconfig"; path = "Target Support Files/Pods-ToolClass-ToolClassUITests/Pods-ToolClass-ToolClassUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		CEEF518E9579B29DB841D7CB /* Pods_ToolClassTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ToolClassTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D26F94E68530BE8FBF810ADD /* Pods-ToolClassTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ToolClassTests.debug.xcconfig"; path = "Target Support Files/Pods-ToolClassTests/Pods-ToolClassTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -297,7 +303,7 @@
 			children = (
 				6E30BEB42668E09F008651EF /* UIImage+Extension.swift */,
 				6E30BEB02668E04C008651EF /* UITableView+Extension.swift */,
-				6E30BEB12668E04C008651EF /* UIView+Extension.swift */,
+				6E30BEB12668E04C008651EF /* UIView+ExtensionS.swift */,
 				6E30BEA22668DBB5008651EF /* UIColor+Extension.swift */,
 				6E30BEA02668D73A008651EF /* String+Extension.swift */,
 				6E76FEDA2684B3210024CAD8 /* UIButton+Extension.swift */,
@@ -308,6 +314,8 @@
 		6E30BEA52668DC62008651EF /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				A541CB372C7DD36C00C0EFBA /* UIView+Extension.h */,
+				A541CB382C7DD36C00C0EFBA /* UIView+Extension.m */,
 				6E8782A526B55AD000442F06 /* UIScrollView+MJRefreshExtension.h */,
 				6E8782A426B55AD000442F06 /* UIScrollView+MJRefreshExtension.m */,
 				6E76FEDC2684B81C0024CAD8 /* UIButton+Extension.h */,
@@ -329,6 +337,8 @@
 		6E30BEAA2668DD6C008651EF /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				A541CB342C7DD32B00C0EFBA /* HelpTool.h */,
+				A541CB352C7DD32B00C0EFBA /* HelpTool.m */,
 				6E80A8EB2681E23800DD5689 /* NetToolOC.h */,
 				6E80A8EC2681E23800DD5689 /* NetToolOC.m */,
 			);
@@ -699,7 +709,7 @@
 				6E30BEAF2668DDAD008651EF /* CountDown.m in Sources */,
 				6EE0849226AAB9B4002696ED /* PublicPara.swift in Sources */,
 				6E6BE39D2680C5BC0044DA92 /* SystemVersion.swift in Sources */,
-				6E30BEB32668E04C008651EF /* UIView+Extension.swift in Sources */,
+				6E30BEB32668E04C008651EF /* UIView+ExtensionS.swift in Sources */,
 				6EE0849C26AABA04002696ED /* WaterTagModel.m in Sources */,
 				6E80A8D72681B6D300DD5689 /* TimeAbout.swift in Sources */,
 				6E8782A626B55AD000442F06 /* UIScrollView+MJRefreshExtension.m in Sources */,
@@ -708,9 +718,11 @@
 				6E90BACC26CBBFE200E26E21 /* ExpandButton.swift in Sources */,
 				6E30BE732668D671008651EF /* ViewController.swift in Sources */,
 				6E30BEC42669CE61008651EF /* Test1VC.m in Sources */,
+				A541CB392C7DD36C00C0EFBA /* UIView+Extension.m in Sources */,
 				6E80A90826831D4E00DD5689 /* CommonTool.swift in Sources */,
 				6EE0849B26AABA04002696ED /* WaterTagflowLayout.m in Sources */,
 				6EE082DE26A52B1B002696ED /* PaddingLabelOC.m in Sources */,
+				A541CB362C7DD32B00C0EFBA /* HelpTool.m in Sources */,
 				6E30BE6F2668D671008651EF /* AppDelegate.swift in Sources */,
 				6E76FEBD26843B540024CAD8 /* SwiftPch.swift in Sources */,
 				6E30BE712668D671008651EF /* SceneDelegate.swift in Sources */,
