@@ -29,11 +29,9 @@
     
    
 //    [openIcon addTarget:self action:@selector(tapOpenAction) forControlEvents:UIControlEventTouchUpInside];
-    
-    
-
-    
-    
+    NSLog(@"%@",self.view.cs_id);
+    self.view.cs_id = @"111";
+    NSLog(@"%@",self.view.cs_id);
     [self test11];
 }
 

@@ -8,6 +8,7 @@
 
 import Foundation
 
+@objc
 extension UIView {
     public var origin: CGPoint {
         get { return frame.origin }
@@ -60,35 +61,31 @@ extension UIView {
     }
 }
 
+@objc
 extension UIView {
     private struct AssociatedKey {
-        static var identifier: String = "identifier"
-        static var viewTypeId: String = "viewTypeId"
+        static var view_identifier: String = "view_identifier"
+        static var view_code: String = "view_code"
     }
-    var viewStrId: String {
+    
+    var cs_id: String {
         get {
-            return objc_getAssociatedObject(self, AssociatedKey.identifier) as? String ?? ""
+            return objc_getAssociatedObject(self, AssociatedKey.view_identifier) as? String ?? ""
         }
         
         set {
-            objc_setAssociatedObject(self, AssociatedKey.identifier, newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+            objc_setAssociatedObject(self, AssociatedKey.view_identifier, newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
         }
     }
     
-    
-    //渐变色
-    func setLayerColors(_ colors:[CGColor]) {
-        let gradientLocations:[NSNumber] = [0.0, 1.0]
+    var cs_code: Int {
+        get {
+            return objc_getAssociatedObject(self, AssociatedKey.view_code) as? Int ?? -999
+        }
         
-        let gradientLayer = CAGradientLayer()
-        gradientLayer.colors = colors
-        gradientLayer.locations = gradientLocations
-        
-        gradientLayer.frame = self.bounds
-        
-        gradientLayer.startPoint = CGPoint(x: 0, y: 0)
-        gradientLayer.endPoint = CGPoint(x: 0, y: 0)
-        self.layer.addSublayer(gradientLayer)
+        set {
+            objc_setAssociatedObject(self, AssociatedKey.view_code, newValue, .OBJC_ASSOCIATION_ASSIGN)
+        }
     }
     
 }

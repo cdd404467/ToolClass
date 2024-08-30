@@ -7,7 +7,6 @@
 
 #import "HelpTool.h"
 #import <AVFoundation/AVFoundation.h>
-#import "UIView+Extension.h"
 
 @implementation HelpTool
 //  添加点击手势

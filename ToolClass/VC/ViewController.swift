@@ -23,8 +23,11 @@ class ViewController: UIViewController {
         title = "首页"
         let lab: UIButton = UIButton.init()
         lab.backgroundColor = .gray
+        lab.setTitle("jump", for: .normal)
+        lab.setTitleColor(.red, for: .normal)
         lab.addTarget(self, action: #selector(jump), for: .touchUpInside)
         view.addSubview(lab)
+        lab.touchInsets = .init(top: 0, left: 30, bottom: 300, right: 0)
         lab.snp.makeConstraints { make in
             make.left.equalTo(50)
             make.top.equalTo(100)
@@ -32,9 +35,11 @@ class ViewController: UIViewController {
         }
         lab.superview?.layoutIfNeeded()
         
+        
+        
         let v = UIView()
-        v.backgroundColor = .red
-        v.frame = CGRect(x: lab.left, y: lab.bottom, width: lab.width, height: lab.height / 2)
+        v.backgroundColor = .lightGray
+        v.frame = CGRect(x: lab.centerX, y: lab.centerY, width: lab.width, height: lab.height / 2)
         view.addSubview(v)
         
         
@@ -51,19 +56,6 @@ class ViewController: UIViewController {
             }
             set {}
         }
-        
-      
-//
-//        if #available(iOS 8, *) {
-//            if (pp == CGSize.zero) {
-//                print("1111")
-//            }
-//            if (__CGSizeEqualToSize(pp , CGSize.init(width: 20, height: 20))) {
-//                print("2222")
-//            }
-//        }
-//        print("--- \(b)")
-        
         
         let digitNames = [
              0: "Zero",1: "One",2: "Two",  3: "Three",4: "Four",

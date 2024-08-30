@@ -89,11 +89,29 @@ public extension UIButton {
     
 }
 
+@objc
 extension UIButton {
+    private struct AssociatedKeys {
+        static var touchInsetsKey = UIEdgeInsets.zero
+    }
+    
+    var touchInsets: UIEdgeInsets {
+        get {
+            return objc_getAssociatedObject(self, &AssociatedKeys.touchInsetsKey) as? UIEdgeInsets ?? .zero
+        }
+        set {
+            objc_setAssociatedObject(self, &AssociatedKeys.touchInsetsKey, newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+        }
+    }
+    ///如果失效的话,监察是否有其他地方重写了这个方法
+    open override func point(inside point: CGPoint, with event: UIEvent?) -> Bool {
+        let largerRect = bounds.inset(by: touchInsets.inverted())
+        return largerRect.contains(point)
+    }
+}
 
-    
-    
-    
-    
-
+extension UIEdgeInsets {
+    func inverted() -> UIEdgeInsets {
+        return UIEdgeInsets(top: -top, left: -left, bottom: -bottom, right: -right)
+    }
 }
